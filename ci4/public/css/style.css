@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #2b323c;
+	color: #fff;
+}
+
+.sectionTitle {
+    text-align: center;
+    width: fit-content;
+	font-size: 50px; 
+	font-weight: 700; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+hr{
+	width: 40%;
+	height: 3px;
+	border: 0 none;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
+	margin-bottom:5px;
+	background-color:#fff724;
+}
+
+header {
+} 
+
+section{
+	min-height: fit-content;
+	display: block;
+	margin-bottom: 10%;
+}
+
+/*<---========Main======--->*/
+.text-box{
+	height: 100vh;
+	margin-top: 13%;
+	font-size: 15px;
+	letter-spacing: 1px;
+	line-height: 26px;
+	color: #fff;
+	padding: 0 30px 0 30px;
+}
+
+.text-box h1{
+	font-size: 75px;
+	line-height: 125px;
+}
+
+.text-box a{
+	margin-top: 70px;
+	margin-right: 25px;
+	display: inline-block;
+	border-radius: 6px;
+	border: 2px solid #fff724;
+	color: #fff724;
+	font-weight: 700;
+	padding: 10px 30px;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+}
+.text-box a:hover{
+	background: #fff724;
+	color: #000;
+	font-weight: 400;
+	transition: all .10s ease;
+}
+
+span{
+	color: yellow;
+}
+
+.catto-img{
+	width: 540px;
+	position: absolute;
+	right: 5%;
+	bottom: 0;
+}
+
+/*<---========About======--->*/
+.aboutImage {
+	width: 250px;
+	height: 250px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.aboutImage img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.aboutText{
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+}
+
+/*<---========Achievements======--->*/
+
+
+/*<---========Footer======--->*/
+.footer {
+	background-color: black;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	margin: 0;
+	position: relative;
+}

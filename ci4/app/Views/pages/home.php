@@ -4,11 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="media/icon.jpg">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<script defer src="js/app.js"></script>
 	
 	<title>Meow Meow Meow</title>
 </head>
@@ -16,19 +15,19 @@
 <body>
 	<nav>	
 		<div class ="dancingCatto">
-			<a href="#"><img src="media/dancingCatto.gif"></a>
+			<a href=""><img src="media/dancingCatto.gif"></a>
 		</div>
 		<div class ="paripapa">
-			<a href="#"><img src="media/paripapa.jpg"></a>
+			<a href=""><img src="media/paripapa.jpg"></a>
 		</div>
 		
 		<div class="openMenu"><i class="ri-menu-fill"></i></div>
 		<ul class="mainMenu">
-			<li><a href="#">Home</a></li>
+			<li><a href="">Home</a></li>
 			<li><a href="#About">About Me</a></li> 
 			<li><a href="#Achievements">Achievements</a></li>
 			<li><a href="#Contact">Contact</a></li>
-			<li><a href="guests.php">Guests</a></li>
+			<li><a href="/lab3/ci4/public/news/create">Guest Form</a></li>
 			<div class="closeMenu"><i class="ri-close-circle-fill"></i></div>
 			<span class="icons">
                 <i class="ri-facebook-circle-fill"></i>
@@ -37,34 +36,10 @@
 				<i class="ri-github-fill"></i>
             </span>
 		</ul>
-		<script>
-		const mainMenu = document.querySelector('.mainMenu');
-		const closeMenu = document.querySelector('.closeMenu');
-		const openMenu = document.querySelector('.openMenu');
-		const menu_items = document.querySelectorAll('nav .mainMenu li a');
-
-		openMenu.addEventListener('click',show);
-		closeMenu.addEventListener('click',close);
-
-		// close menu when you click on a menu item 
-		menu_items.forEach(item => {
-			item.addEventListener('click',function(){
-        close();
-			})
-		})
-
-		function show(){
-			mainMenu.style.display = 'flex';
-			mainMenu.style.top = '0';
-		}
-		function close(){
-			mainMenu.style.top = '-100%';
-		}
-		</script>
 	</nav>
 
 <!---========Main======--->
-	<div class="text-box">
+	<div class="text-box hidden">
 		<div>
 			<h1>I am <span class="auto-type"></span></h1>
 		</div>
@@ -77,10 +52,10 @@
 		</p>
 		
 		<a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">WIP Button 1</a>
-		<a href="">References</a>
+		<a href="/lab3/ci4/public/references">References</a>
 	</div>
 	<img src="media/catto.jpg" class="catto-img">
-		
+
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	
 	<script>
@@ -92,7 +67,8 @@
 	</script>
 	
 <!---========About======--->
-	<section id="About">
+	<div class="spaceDivider" id="About"></div>
+	<section class = "hidden">
 		<div>
 			<p class="sectionTitle">
 				About Me
@@ -115,11 +91,64 @@
 	</section>
 
 <!---========Achievements======--->
-	<section id="Achievements">
+	<div class="spaceDivider" id="Achievements"></div>
+	<section class = "hidden">
 		<div>
 			<p class="sectionTitle">
 				Achievements
 			</p><hr>
+			<div class="container">
+				<div class="card">
+					<div class="imgBox  hidden">
+						<img class="card-img"src="media/DPS_Threat.jpg" alt="DPS Threat" />
+						<div class="content">
+							<p>
+								Deal more than 1800 DPM
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBox  hidden">
+						<img class="card-img"src="media/Champion.jpg" alt="Champion" />
+						<div class="content">
+							<p>
+								Earn points from challenges in the Champion group
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBox  hidden">
+						<img class="card-img"src="media/CTT.jpg" alt="Can't Touch This" />
+						<div class="content">
+							<p>
+								Win ARAM games without being killed by an enemy champion (you can still be executed)
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBox hidden">
+						<img class="card-img"src="media/SnowDay.jpg" alt="Snow Day" />
+						<div class="content">
+							<p>
+								Hit snowballs on champions in ARAM
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBox  hidden">
+						<img class="card-img"src="media/BadMedicine.jpg" alt="Bad Medicine" />
+						<div class="content">
+							<p>
+								Kill opponents who recently received a health pack in ARAM
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -140,7 +169,7 @@
 
 <!---========Footer ======--->
 <div class="footer">
-	<p>WIP Footer</p>
+	WEBPROG &copy; 2021 David Wilson Luminarias | All Rights Reserved
 </div>
 
 </body>

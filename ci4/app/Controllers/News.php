@@ -31,7 +31,7 @@ class News extends BaseController
             throw new PageNotFoundException('Cannot find the news item: ' . $slug);
         }
 
-        $data['title'] = $data['news']['title'];
+        $data['title'] = $data['news']['email'];
 
         return view('templates/header', $data)
             . view('news/view')
@@ -50,12 +50,12 @@ class News extends BaseController
                 . view('templates/footer');
         }
 
-        $post = $this->request->getPost(['title', 'body']);
+        $post = $this->request->getPost(['email', 'comment']);
 
         // Checks whether the submitted data passed the validation rules.
         if (! $this->validateData($post, [
-            'title' => 'required|max_length[255]|min_length[3]',
-            'body'  => 'required|max_length[5000]|min_length[10]',
+            'email' => 'required|max_length[255]|min_length[3]',
+            'comment'  => 'required|max_length[5000]|min_length[10]',
         ])) {
             // The validation fails, so returns the form.
             return view('templates/header', ['title' => 'Create a news item'])
@@ -66,9 +66,9 @@ class News extends BaseController
         $model = model(NewsModel::class);
 
         $model->save([
-            'title' => $post['title'],
-            'slug'  => url_title($post['title'], '-', true),
-            'body'  => $post['body'],
+            'email' => $post['email'],
+            'slug'  => url_title($post['email'], '-', true),
+            'comment'  => $post['comment'],
         ]);
 
         return view('templates/header', ['title' => 'Create a news item'])
